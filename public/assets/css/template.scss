@@ -14,6 +14,7 @@ body {
     color: #000;
 }
 
+
 .page {
     display: flex;
     align-items: center;
@@ -70,8 +71,12 @@ body {
 
 .section {
     @include theme($theme: white );
-    height : $section_height;
+    // height : 800px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 

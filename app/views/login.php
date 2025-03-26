@@ -20,7 +20,6 @@
             </div>
         <?php unset($_SESSION['type'], $_SESSION['message']); } ?>
 
-        <h5> <?= $url ?> </h5>
 
         <form action="<?= $url ?>" method="post">
             <label for="nom"> Nom, Prénoms </label>

@@ -33,7 +33,7 @@ class CaisseModel {
     public function getAllProduit()
     {
         $stmt = $this->db->query("SELECT * FROM Produit");
-        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function getProduitByCaisse($id_caisse)
@@ -53,12 +53,13 @@ class CaisseModel {
         return $stmt->fetch();
     }
 
-    public function getAllDept () {
-        $stmt = $this->db->prepare("SELECT * FROM Departement");
-        
-        $stmt->execute();
-        $departements = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $departements;
+
+    public function getProduitById ($id_produit)
+    {
+        $stmt = $this->db->prepare("SELECT * FROM Produit WHERE id = ?");
+        $stmt->execute([$id_produit]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
     
 }

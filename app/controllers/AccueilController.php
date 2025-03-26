@@ -15,7 +15,8 @@ class AccueilController
     {
         $caisse = Flight::CaisseModel()->getAllCaisse();
         $data = ['caisse' => $caisse]; 
-        Flight::render('home', $data);
+        Flight::render('home', $data,'contenu');
+        Flight::render('template');
     }
 
 
@@ -24,8 +25,9 @@ class AccueilController
         $request = Flight::request()->query;
         $id_caisse = (int) $request->id_caisse;
 
-        $produits = Flight::CaisseModel()->getProduitByCaisse($id_caisse);
-        Flight::render('achat', ['produits' => $produits, 'id_caisse' => $id_caisse]);
+        $produits = Flight::CaisseModel()->getAllProduit();
+        Flight::render('achat', ['produits' => $produits, 'id_caisse' => $id_caisse],'contenu');
+        Flight::render('template');
     }
     
 }

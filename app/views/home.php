@@ -1,6 +1,6 @@
 <h1>Bienvenue sur notre boutique</h1>
-<section class="choix-caisse">
-    
+
+<div class="formulaire">
     <form action="<?= constant('BASE_URL')?>saisie_achat" method="get">
         <label for="caisse">Choisir Caisse</label>
         <select name="id_caisse" id="caisse">
@@ -10,5 +10,5 @@
         </select>
         <button type="submit">Valider</button>
     </form>
-    
-</section>
+</div>
+

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="<?= constant('BASE_URL')?>public/assets/css/template.css">
+    <link rel="stylesheet" href="<?= constant('BASE_URL')?>public/assets/css/login.css">
 </head>
 <body>
 
@@ -20,7 +21,13 @@
         </div>
 
         
-        <div class="section"> Section </div>
+        <div class="section"> 
+                 
+        </div>
+
+        <?php if (isset($contenu)) { 
+            echo $contenu; } ?>
+
 
         <div class="footer">
             <p> Copyright TD SI IHM Mars  2025 </p>
