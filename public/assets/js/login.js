@@ -54,8 +54,8 @@ messageContainer.style.display = "none";
 }
 
 // Exemple d'utilisation
-//showMessage("success", "Inscription réussie!");
-showMessage("error", "Erreur: Veuillez vérifier vos informations.");
+// //showMessage("success", "Inscription réussie!");
+// showMessage("error", "Erreur: Veuillez vérifier vos informations.");
 
 
 

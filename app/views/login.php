@@ -12,8 +12,13 @@
     <div class="formulaire">
         <h2> Formulaire d'inscription </h2>
     
+
+        <?php if (isset($_SESSION['type']) && isset($_SESSION['message'])) { ?>
         <!-- Message de succès ou d'erreur -->
-        <div class="message-container" id="message-container"></div>
+            <div class="message-container <?= $_SESSION['type']?>" id="message-container">
+                <?= $_SESSION['message'] ?>
+            </div>
+        <?php } ?>
     
         <form action="" method="post">
             <label for="nom"> Nom , Prénoms </label>
