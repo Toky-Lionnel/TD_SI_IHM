@@ -25,8 +25,7 @@ class WelcomeController {
     }
 
     public function testDB() {
-        $CaisseModel = new CaisseModel(Flight::db());
-		$produit = $CaisseModel->test();
+		$produit = Flight::CaisseModel()->test();
         $data = ['nom' => $produit["nom"], 'prix'=> $produit["date_naissance"]];
         Flight::render('welcome', $data);
     }

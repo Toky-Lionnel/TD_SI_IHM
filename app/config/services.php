@@ -31,7 +31,7 @@ use app\models\CaisseModel;
 
 
 
-Flight::map('caisseModel', function () {
+Flight::map('CaisseModel', function () {
     return new CaisseModel(Flight::db());
 });
 
