@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Flight;
+use PDO;
 
 class CaisseModel {
 
@@ -29,5 +30,12 @@ class CaisseModel {
         return $stmt->fetch();
     }
 
+    public function getAllDept () {
+        $stmt = $this->db->prepare("SELECT * FROM Departement");
+        
+        $stmt->execute();
+        $departements = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $departements;
+    }
     
 }
