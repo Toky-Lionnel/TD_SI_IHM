@@ -1,0 +1,96 @@
+@charset "UTF-8";
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 700px;
+  padding: 20px;
+  background-color: white;
+  gap: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  /* Message d'erreur ou de succès */
+}
+.formulaire .message-container {
+  width: 500px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  display: none; /* Caché par défaut */
+}
+.formulaire .message-success {
+  background-color: #28a745;
+  color: white;
+  display: block;
+}
+.formulaire .message-error {
+  background-color: #dc3545;
+  color: white;
+  display: block;
+}
+.formulaire form {
+  margin: 15px 0;
+}
+.formulaire form label {
+  display: block;
+  margin-bottom: 10px;
+}
+.formulaire form input, .formulaire form select {
+  display: block;
+  width: 500px;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: medium;
+}
+.formulaire form select {
+  height: 37px;
+  padding: 8px;
+  width: 520px;
+}
+.formulaire form #submit-button {
+  display: block;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  margin: 15px auto;
+  padding: 12px 24px;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.formulaire form #submit-button:hover {
+  background-color: #0062cc;
+  transform: scale(1.05);
+}
+.formulaire form #submit-button:active {
+  transform: scale(0.95);
+}
+.formulaire form .password-container {
+  margin-bottom: 15px;
+}
+.formulaire form .password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.formulaire form .toggle-password {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  color: gray;
+}
+.formulaire form .error-message {
+  font-size: 14px;
+  color: #dc3545;
+  font-weight: bold;
+}/*# sourceMappingURL=login.css.map */
