@@ -16,11 +16,12 @@ CREATE TABLE Caisse
     nom VARCHAR(10)
 );
 
-CREATE TABLE Client
-(
+CREATE TABLE Client (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(20)
-)
+    nom VARCHAR(20),
+    motdepasse VARCHAR(20)
+);
+
 
 CREATE TABLE Achat
 (

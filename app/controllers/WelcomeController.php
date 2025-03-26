@@ -14,7 +14,7 @@ class WelcomeController {
 	public function home() {
 		$produit = Flight::productModel()->getProduit();
         $data = ['nom' => $produit["nom"], 'prix'=> $produit["prix"]];
-        Flight::render('welcome', $data);
+        Flight::render('template', $data);
     }
 
     
