@@ -10,5 +10,6 @@
     </article>
     <?php } ?>
 
+    
     <!-- Ajoutez d'autres produits ici -->
 </section>
