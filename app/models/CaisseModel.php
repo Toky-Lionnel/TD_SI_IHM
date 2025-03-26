@@ -38,16 +38,7 @@ class CaisseModel {
 
     public function getProduitByCaisse($id_caisse)
     {
-        $stmt = $this->db->prepare("SELECT 
-            p.designation AS produit, 
-            p.prix AS prix_unite, 
-            a.quantite, 
-            (p.prix * a.quantite) AS prix_total,
-            a.date_achat
-            FROM Achat a
-            JOIN Produit p ON a.id_produit = p.id
-            WHERE a.id_caisse = ?
-            ORDER BY a.date_achat DESC");
+        $stmt = $this->db->prepare("SELECT p.* FROM Achat as a JOIN Produit as p ON a.id_produit=p.id WHERE a.id_caisse = ?");
         $stmt->execute([$id_caisse]);
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
         return $stmt->fetch();
