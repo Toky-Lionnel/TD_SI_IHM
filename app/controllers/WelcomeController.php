@@ -2,7 +2,7 @@
 
 namespace app\controllers;
 
-use app\models\ProductModel;
+use app\models\CaisseModel;
 use Flight;
 
 class WelcomeController {
@@ -12,21 +12,21 @@ class WelcomeController {
 	}
 
 	public function home() {
-		$produit = Flight::productModel()->getProduit();
+		$produit = Flight::CaisseModel()->getProduit();
         $data = ['nom' => $produit["nom"], 'prix'=> $produit["prix"]];
         Flight::render('template', $data);
     }
 
     
 	public function homeDB() {
-		$produit = Flight::productModel()->test();
+		$produit = Flight::CaisseModel()->test();
         $data = ['nom' => $produit["nom"], 'prix'=> $produit["date_naissance"]];
         Flight::render('welcome', $data);
     }
 
     public function testDB() {
-        $productModel = new ProductModel(Flight::db());
-		$produit = $productModel->test();
+        $CaisseModel = new CaisseModel(Flight::db());
+		$produit = $CaisseModel->test();
         $data = ['nom' => $produit["nom"], 'prix'=> $produit["date_naissance"]];
         Flight::render('welcome', $data);
     }

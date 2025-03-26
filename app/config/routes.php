@@ -2,6 +2,7 @@
 
 use app\controllers\ApiExampleController;
 use app\controllers\WelcomeController;
+use app\controllers\AccueilController;
 use flight\Engine;
 use flight\net\Router;
 //use Flight;
@@ -33,5 +34,6 @@ use flight\net\Router;
  });
  
 
-
+$AccueilController = new AccueilController();
+$router->get('/', [ $AccueilController, 'home' ]);
 

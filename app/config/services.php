@@ -4,7 +4,7 @@ use flight\Engine;
 use flight\database\PdoWrapper;
 use flight\debug\database\PdoQueryCapture;
 use Tracy\Debugger;
-use app\models\ProductModel;
+use app\models\CaisseModel;
 
 /** 
  * @var array $config This comes from the returned array at the bottom of the config.php file
@@ -30,6 +30,9 @@ use app\models\ProductModel;
 
 
 
-Flight::map('productModel', function () {
-    return new ProductModel(Flight::db());
+
+Flight::map('caisseModel', function () {
+    return new CaisseModel(Flight::db());
 });
+
+// Flight::register('CaisseModel', 'App\Models\CaisseModel');
