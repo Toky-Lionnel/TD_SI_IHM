@@ -28,7 +28,8 @@ class AccueilController
         $produits = Flight::CaisseModel()->getAllProduit();
         Flight::render('achat', ['produits' => $produits, 'id_caisse' => $id_caisse],'contenu');
         Flight::render('template');
-        Flight::render('achat', ['produits' => $produits, 'id_caisse' => $id_caisse]);
     }
+
+    
     
 }

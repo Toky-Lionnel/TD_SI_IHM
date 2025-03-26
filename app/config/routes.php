@@ -42,9 +42,11 @@ $router->get('/', [ $AccueilController, 'home' ]);
 $router->get('/saisie_achat', [ $AccueilController, 'vers_saisie_achat']);
 
 
-
 $Login_Controller = new LoginController();
 $router->get('/connexion', [$Login_Controller,'connexion']);
 $router->get('/inscription', [$Login_Controller,'inscription']);
 $router->post('/inscription', [$Login_Controller,'insertUtilisateur']);
 $router->post('/connexion', [$Login_Controller,'login']);
+
+
+$router->get('/achat',[]);

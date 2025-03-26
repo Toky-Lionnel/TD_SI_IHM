@@ -3,7 +3,7 @@
     <div class="formulaire">
         <h3> Ajout de produits </h3>
         <h3> Caisse : <?= $id_caisse ?> </h3>
-        <form action="<?= constant('BASE_URL')?>saisie_achat" method="post">
+        <form action="<?= constant('BASE_URL')?>achat" method="post">
             <label for="produit">Produit</label>
             <select name="produit" id="produit">
                 <?php foreach ($produits as $p) { ?>
