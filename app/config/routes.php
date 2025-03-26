@@ -13,11 +13,11 @@ use flight\net\Router;
  */
 
  $Welcome_Controller = new WelcomeController();
- $router->get('/', [ $Welcome_Controller, 'home' ]); 
- $router->get('/homedb', [ $Welcome_Controller, 'homedb' ]); 
- $router->get('/testdb', [ $Welcome_Controller, 'testdb' ]); 
- $router->get('/home-template', [ $Welcome_Controller, 'homeTemplate' ]); 
- $router->get('/product-template', [ $Welcome_Controller, 'productTemplate' ]); 
+//  $router->get('/', [ $Welcome_Controller, 'home' ]); 
+//  $router->get('/homedb', [ $Welcome_Controller, 'homedb' ]); 
+//  $router->get('/testdb', [ $Welcome_Controller, 'testdb' ]); 
+//  $router->get('/home-template', [ $Welcome_Controller, 'homeTemplate' ]); 
+//  $router->get('/product-template', [ $Welcome_Controller, 'productTemplate' ]); 
  
  
  //$router->get('/', \app\controllers\WelcomeController::class.'->home'); 
@@ -36,4 +36,4 @@ use flight\net\Router;
 
 $AccueilController = new AccueilController();
 $router->get('/', [ $AccueilController, 'home' ]);
-
+$router->get('/saisie_achat', [ $AccueilController, 'vers_saisie_achat']);

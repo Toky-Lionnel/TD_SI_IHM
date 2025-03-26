@@ -13,7 +13,7 @@
             <p> TD SI IHM ETU003107 - ETU003140</p>
             <nav>
                 <ul>
-                    <li> <a href=""> Home </a> </li>
+                    <li> <a href="<?= constant('BASE_URL')?>"> Home </a> </li>
                     <li> <a href=""> Changer Caisse </a> </li>
                 </ul>
             </nav>
