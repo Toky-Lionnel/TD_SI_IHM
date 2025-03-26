@@ -24,7 +24,7 @@ class AccueilController
         $request = Flight::request()->query;
         $id_caisse = (int) $request->id_caisse;
 
-        $produits = Flight::CaisseModel()->getProduitByCaisse($id_caisse);
+        $produits = Flight::CaisseModel()->getAllProduit();
         Flight::render('achat', ['produits' => $produits, 'id_caisse' => $id_caisse]);
     }
     

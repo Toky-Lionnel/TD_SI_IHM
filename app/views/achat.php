@@ -27,14 +27,7 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($produits as $p) { ?>
-                    <tr>
-                        <td><?= $p['designation'] ?></td>
-                        <td><?= $p['produit'] ?></td>
-                        <td><?= $p['prix_unite'] ?></td>
-                        <td><?= $p['prix_total'] ?></td>
-                    </tr>
-                <?php } ?>
+                
             </tbody>
         </table>
     
