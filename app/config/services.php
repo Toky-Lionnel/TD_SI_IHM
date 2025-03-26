@@ -5,6 +5,8 @@ use flight\database\PdoWrapper;
 use flight\debug\database\PdoQueryCapture;
 use Tracy\Debugger;
 use app\models\CaisseModel;
+use app\models\LoginModel;
+
 
 /** 
  * @var array $config This comes from the returned array at the bottom of the config.php file
@@ -33,6 +35,10 @@ use app\models\CaisseModel;
 
 Flight::map('CaisseModel', function () {
     return new CaisseModel(Flight::db());
+});
+
+Flight::map('LoginModel', function () {
+    return new LoginModel(Flight::db());
 });
 
 // Flight::register('CaisseModel', 'App\Models\CaisseModel');

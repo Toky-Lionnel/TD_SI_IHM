@@ -3,6 +3,7 @@
 use app\controllers\ApiExampleController;
 use app\controllers\WelcomeController;
 use app\controllers\AccueilController;
+use app\controllers\LoginController;
 use flight\Engine;
 use flight\net\Router;
 //use Flight;
@@ -12,7 +13,8 @@ use flight\net\Router;
  * @var Engine $app
  */
 
- $Welcome_Controller = new WelcomeController();
+//  $Welcome_Controller = new WelcomeController();
+//  $Welcome_Controller = new WelcomeController();
 //  $router->get('/', [ $Welcome_Controller, 'home' ]); 
 //  $router->get('/homedb', [ $Welcome_Controller, 'homedb' ]); 
 //  $router->get('/testdb', [ $Welcome_Controller, 'testdb' ]); 
@@ -34,6 +36,15 @@ use flight\net\Router;
  });
  
 
+
 $AccueilController = new AccueilController();
 $router->get('/', [ $AccueilController, 'home' ]);
 $router->get('/saisie_achat', [ $AccueilController, 'vers_saisie_achat']);
+
+
+
+$Login_Controller = new LoginController();
+$router->get('/connexion', [$Login_Controller,'connexion']);
+$router->get('/inscription', [$Login_Controller,'inscription']);
+$router->post('/inscription', [$Login_Controller,'insertUtilisateur']);
+$router->post('/connexion', [$Login_Controller,'login']);

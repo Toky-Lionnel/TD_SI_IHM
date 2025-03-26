@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Flight;
+use PDO;
 
 class CaisseModel {
 
@@ -49,7 +50,15 @@ class CaisseModel {
             ORDER BY a.date_achat DESC");
         $stmt->execute([$id_caisse]);
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        return $stmt->fetch();
     }
 
+    public function getAllDept () {
+        $stmt = $this->db->prepare("SELECT * FROM Departement");
+        
+        $stmt->execute();
+        $departements = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $departements;
+    }
     
 }
