@@ -1,115 +1,110 @@
+// Variables
 $bg-color: white;
 $primary-color: #007bff;
 $error-color: #dc3545;
 $success-color: #28a745;
-$border-color: #ccc;
-
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+$border-color: #ced4da;
+$text-color: #212529;
 
 .formulaire {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 700px;
-    padding: 20px;
-    background-color: $bg-color;
-    gap: 15px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
+  width: 100%;
+  max-width: 700px;
+  padding: 2rem;
+  margin: 1rem;
+  background: $bg-color;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-    /* Message d'erreur ou de succès */
-    .message-container {
-        width: 500px;
-        padding: 10px;
-        border-radius: 8px;
-        text-align: center;
-        font-size: 16px;
-        font-weight: bold;
-        display: none; /* Caché par défaut */
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: $primary-color;
+  }
+
+  .message-container {
+    width: 500px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+
+    &.message-success {
+      background: $success-color;
+      color: white;
     }
 
-    .message-success {
-        background-color: $success-color;
-        color: white;
-        display: block;
+    &.message-error {
+      background: $error-color;
+      color: white;
+    }
+  }
+
+  form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
     }
 
-    .message-error {
-        background-color: $error-color;
-        color: white;
-        display: block;
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid $border-color;
+      border-radius: 8px;
+      font-size: 1rem;
+
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+      }
     }
 
-    form {
-        margin: 15px 0;
+    .password-wrapper {
+      position: relative;
 
-        label {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        input, select {
-            display: block;
-            width: 500px;
-            padding: 10px;
-            border-radius: 15px;
-            font-size: medium;
-        }
-
-        select {
-            height: 37px;
-            padding: 8px;
-            width: 520px;
-        }
-
-        #submit-button {
-            display: block;
-            background-color: $primary-color;
-            color: white;
-            border: none;
-            margin: 15px auto;
-            padding: 12px 24px;
-            font-size: 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-
-            &:hover {
-                background-color: darken($primary-color, 10%);
-                transform: scale(1.05);
-            }
-
-            &:active {
-                transform: scale(0.95);
-            }
-        }
-
-        .password-container {
-            margin-bottom: 15px;
-        }
-
-        .password-wrapper {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-
-        .toggle-password {
-            position: absolute;
-            right: 20px;
-            cursor: pointer;
-            font-size: 14px;
-            color: gray;
-        }
-
-        .error-message {
-            font-size: 14px;
-            color: $error-color;
-            font-weight: bold;
-        }
+      .toggle-password {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #6c757d;
+      }
     }
+
+    #submit-button {
+      width: 100%;
+      padding: 0.75rem;
+      background: $primary-color;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:hover {
+        background: darken($primary-color, 10%);
+      }
+    }
+
+    .switch-link {
+      display: block;
+      margin-top: 1rem;
+      text-align: center;
+      color: #6c757d;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .formulaire {
+    padding: 1.5rem;
+  }
 }

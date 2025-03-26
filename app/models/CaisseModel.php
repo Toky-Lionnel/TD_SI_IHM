@@ -14,19 +14,10 @@ class CaisseModel {
         $this->db = $db;
     }
 
-	// public  function getProduit() {
-    //     $produit = ['nom' => 'iphone 15', 'prix'=> 1290];
-    //     return $produit;
-    // }
-
-	// public  function test() {
-    //     $stmt = $this->db->query("SELECT * FROM etudiant");
-    //     return $stmt->fetch();
-    // }
 
     public function getAllCaisse()
     {
-        $stmt = $this->db->query("SELECT * FROM caisse");
+        $stmt = $this->db->query("SELECT * FROM Caisse");
         return $stmt->fetch();
     }
 

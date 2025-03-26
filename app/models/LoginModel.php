@@ -16,17 +16,20 @@ class LoginModel {
 
 	public function insertUtilisateur ($nom,$motdepasse)
     {
-        $sql = "INSERT INTO client (nom,motdepasse) VALUES (?,?)";
+        $sql = "INSERT INTO Client (nom,motdepasse) VALUES (?,?)";
         $stmt = $this->db->prepare($sql);
         $stmt->execute([$nom,$motdepasse]);
     }
     
 
-    public function verifUtilisateur($nom, $motdepasse) {
-        $sql = "SELECT id FROM client WHERE nom = ? AND motdepasse = ?";
+    public function verifUtilisateur($nom, $motdepasse)
+    {
+        $sql = "SELECT id FROM Client WHERE nom = ? AND motdepasse = ?";
         $stmt = $this->db->prepare($sql);
         $stmt->execute([$nom, $motdepasse]);
-        return $stmt->fetch() ? true : false;
+        $user = $stmt->fetch();
+    
+        return $user ? $user['id'] : false;
     }
     
 }
