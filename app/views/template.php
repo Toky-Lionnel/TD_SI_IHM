@@ -1,32 +1,31 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - E-commerce</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="<?= constant('BASE_URL')?>public/assets/css/template.css">
 </head>
 <body>
-    <header>
-        <div class="container">
+
+    <div class="page">
+        <div class="header">
+            <p> TD SI IHM ETU003107 - ETU003140</p>
             <nav>
-                <a href="index.html" class="logo">E-Varotra</a>
-                <ul class="menu">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="#categorie1">Catégorie 1</a></li>
-                    <li><a href="#categorie2">Catégorie 2</a></li>
-                    <li><a href="#categorie3">Catégorie 3</a></li>
+                <ul>
+                    <li> <a href=""> Home </a> </li>
+                    <li> <a href=""> Changer Caisse </a> </li>
                 </ul>
             </nav>
         </div>
-    </header>
 
-    <main>
-        <?php include($page.'.php'); ?>
-    </main>
+        
+        <div class="section"> Section </div>
 
-    <footer>
-        <p>&copy; 2024 E-Varotra</p>
-    </footer>
+        <div class="footer">
+            <p> Copyright TD SI IHM Mars  2025 </p>
+        </div>
+    </div>
+    
 </body>
 </html>

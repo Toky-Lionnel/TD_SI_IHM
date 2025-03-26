@@ -1,0 +1,102 @@
+$bg-color : white;
+$font : Arial, Helvetica, sans-serif;
+$section_height : 300px;
+
+
+body {
+    background-color: $bg-color;
+    font-family: $font;
+}
+
+
+@mixin theme($theme: DarkGray) {
+    background-color: $theme;
+    color: #000;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+    padding: 10px;
+    @include theme($theme:white);
+}
+  
+
+.header {
+    @include theme($theme:rgb(52, 58, 64));
+    height: 50px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    p {
+        font-size: larger;
+    }
+
+    nav {
+        width: auto;
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+    
+        
+        li {
+            display: inline-block;
+        }
+        
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: white; // Couleur du texte
+            padding: 10px 20px;
+            border-radius: 5px; // Coins arrondis
+            transition: background-color 0.3s;
+            
+            &:hover {
+                background-color: grey; // Effet au survol
+            }
+        }
+    }
+}
+
+
+.section {
+    @include theme($theme: white );
+    height : $section_height;
+    width: 100%;
+}
+
+
+.footer {
+    @include theme($theme:rgb(52, 58, 64));
+    width: 100%;
+    height: 100px;
+    order: 4;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-content: space-around;
+
+    p {
+        font-size: 20px;
+        color: white;
+    }
+}
+
+
+
+
+
+
+
+
