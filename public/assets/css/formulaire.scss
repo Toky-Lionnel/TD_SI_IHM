@@ -23,7 +23,9 @@ $text-color: #212529;
   }
 
   .message-container {
-    width: 500px;
+    width: 75%; 
+    display: block;
+    margin: auto;
     padding: 0.75rem;
     margin-bottom: 1rem;
     border-radius: 8px;
@@ -53,7 +55,7 @@ $text-color: #212529;
     }
 
     input,select {
-      width: 100%;
+      width: 95%;
       padding: 0.75rem;
       margin-bottom: 1rem;
       border: 1px solid $border-color;
@@ -66,12 +68,16 @@ $text-color: #212529;
       }
     }
 
+    select {
+        width: 102%;
+    }
+
     .password-wrapper {
       position: relative;
 
       .toggle-password {
         position: absolute;
-        right: 0px;
+        right: 15px;
         top: 40%;
         transform: translateY(-60%);
         cursor: pointer;
