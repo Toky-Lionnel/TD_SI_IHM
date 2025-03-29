@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="<?= constant('BASE_URL')?>public/assets/css/login.css">
 </head>
+
 <body>
 
 
@@ -40,6 +41,7 @@
                     <input type="password" name="confirm_password" id="confirm_password" required>
                     <span class="toggle-password" onclick="togglePassword('confirm_password', this)">Afficher</span>
                 </div>
+                <p id="error-message" class="error-message"></p>
             </div>
             <?php } ?>
 
@@ -60,3 +62,6 @@
     
 <script src="<?= constant('BASE_URL')?>public/assets/js/login.js"></script>
 
+</body>
+
+</html>

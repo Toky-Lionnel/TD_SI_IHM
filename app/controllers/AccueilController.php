@@ -30,6 +30,4 @@ class AccueilController
         Flight::render('template');
     }
 
-    
-    
 }
